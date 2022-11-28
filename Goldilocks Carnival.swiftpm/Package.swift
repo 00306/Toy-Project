@@ -19,7 +19,7 @@ let package = Package(
             bundleIdentifier: "com.dassy.carnival",
             teamIdentifier: "VGKCD7Q8NW",
             displayVersion: "1.0",
-            bundleVersion: "4",
+            bundleVersion: "6",
             appIcon: .asset("AppIcon"),
             accentColor: .presetColor(.brown),
             supportedDeviceFamilies: [
@@ -37,18 +37,18 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/onevcat/Kingfisher.git", "7.2.4"..<"8.0.0"),
-        .package(url: "https://github.com/AlexRoar/SwiftYFinance", "1.5.0"..<"2.0.0"),
         .package(url: "https://github.com/paololeonardi/WaterfallGrid.git", "1.0.1"..<"2.0.0"),
-        .package(url: "https://github.com/CSolanaM/SkeletonUI.git", "1.0.9"..<"2.0.0")
+        .package(url: "https://github.com/CSolanaM/SkeletonUI.git", "1.0.9"..<"2.0.0"),
+        .package(url: "https://github.com/AlexRoar/SwiftYFinance", "1.5.0"..<"2.0.0")
     ],
     targets: [
         .executableTarget(
             name: "AppModule",
             dependencies: [
                 .product(name: "Kingfisher", package: "Kingfisher"),
-                .product(name: "SwiftYFinance", package: "SwiftYFinance"),
                 .product(name: "WaterfallGrid", package: "WaterfallGrid"),
-                .product(name: "SkeletonUI", package: "SkeletonUI")
+                .product(name: "SkeletonUI", package: "SkeletonUI"),
+                .product(name: "SwiftYFinance", package: "SwiftYFinance")
             ],
             path: ".",
             resources: [
